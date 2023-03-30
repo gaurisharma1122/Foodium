@@ -10,7 +10,7 @@ const Hero = () => {
                     <h2>Good food choices are good investments.</h2>
                     <p>There is a powerful need for symbolism, and that means the architecture must have something that appeals to the human heart.</p>
                     <button className='button'>
-                        <Link to='/recipes'>
+                        <Link to='/categories'>
                             Explore More
                             <i className="fa-solid fa-arrow-right"></i>
                         </Link>

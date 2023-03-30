@@ -2,6 +2,7 @@ import React from 'react'
 import { useGlobalContext } from '../context/context';
 import { useEffect } from 'react';
 import Hero from '../components/hero/Hero';
+import Categories from '../components/categories/Categories';
 
 const Home = () => {
   const { state, setActiveNavlink } = useGlobalContext();
@@ -13,6 +14,7 @@ const Home = () => {
   return (
   <section className='home'>
     <Hero/>
+    <Categories/>
   </section>
   )
 }

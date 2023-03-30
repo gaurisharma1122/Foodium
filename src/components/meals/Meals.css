@@ -1,0 +1,18 @@
+.meal-item{
+    height: 100%;
+    padding: 15px 15px;
+    background-color: var(--light_pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.meal-item img{
+    width: 100%;
+    border-radius: 5px;
+}
+.meal-item button{
+    width: 100%;
+    margin-top: 1.2rem;
+    font-size: 1.1rem!important;
+}

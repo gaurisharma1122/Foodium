@@ -19,6 +19,7 @@ a{
 .container{
   width: 80%;
   margin: 0 auto;
+  padding: 4rem 0;
 }
 .button{
   padding: 15px 20px;
@@ -34,4 +35,17 @@ a{
 }
 .button a i{
   margin-left: 10px;
+}
+.heading{
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark_pink);
+  margin-bottom: 2rem;
+}
+.cards-container{
+  display: grid;
+  grid-template-columns: 27% 27% 27% ;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }

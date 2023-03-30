@@ -5,5 +5,9 @@ export const reducer= (state, action)=>{
                 return { ...state, activeNavLink: action.payload };
             };
             break;
+        case 'SET_CATEGORIES':
+            {
+                return { ...state, categories: action.payload };
+            }
     }
 }

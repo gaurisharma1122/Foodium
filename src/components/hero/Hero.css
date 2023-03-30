@@ -4,9 +4,6 @@
     background-repeat: no-repeat;
     background-blend-mode: overlay;
 }
-.hero-container{
-    padding: 4rem 0;
-}
 .hero-container-data {
     width: 50%;
 }
