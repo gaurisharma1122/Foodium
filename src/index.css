@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+  --light_pink: #fff3f0;
+  --dark_pink: #874C62;
+  --text_color_1: #414141;
+}
 *{
   margin: 0;
   padding: 0;
@@ -10,4 +15,23 @@ ul{
 }
 a{
   text-decoration: none;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.button{
+  padding: 15px 20px;
+  border: none;
+  background-color: #874C62;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button a{
+  color: #f2f2f2;
+}
+.button a i{
+  margin-left: 10px;
 }
