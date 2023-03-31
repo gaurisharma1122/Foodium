@@ -25,6 +25,8 @@ const CategoryResult = () => {
                     {
                         categoryResult?.map((item) => {
                             return <MealItem key={item.idMeal}
+                                category={category}
+                                idMeal={item.idMeal}
                                 strMeal={item.strMeal}
                                 strMealThumb={item.strMealThumb} />
                         })

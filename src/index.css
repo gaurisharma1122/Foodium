@@ -29,6 +29,10 @@ a{
   font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
+  color: #fff;
+}
+.button i{
+  margin-left: 10px;
 }
 .button a{
   color: #f2f2f2;

@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import CategoryResult from "./pages/CategoryResult";
 import Favourites from "./pages/Favourites";
 import Home from "./pages/Home";
+import MealDetail from "./pages/MealDetail";
 import Recipes from "./pages/Recipes";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/favourites" element={<Favourites />} />
           <Route exact path="/categories" element={<Categories/>}/>
           <Route exact path="/categories/:category" element={<CategoryResult/>}/>
+          <Route exact path="/categories/:category/:mealId" element={<MealDetail/>}/>
         </Routes>
       </div>
 
