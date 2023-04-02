@@ -5,7 +5,7 @@ import CategoryResult from "./pages/CategoryResult";
 import Favourites from "./pages/Favourites";
 import Home from "./pages/Home";
 import MealDetail from "./pages/MealDetail";
-import Recipes from "./pages/Recipes";
+import Recipes from "./pages/recipes/Recipes";
 
 function App() {
   return (

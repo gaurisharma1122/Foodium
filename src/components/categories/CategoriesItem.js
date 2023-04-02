@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Categories.css"
 
-const CategoriesItem = ({ strCategory, strCategoryThumb, strCategoryDescription }) => {
+const CategoriesItem = ({ id, strCategory, strCategoryThumb, strCategoryDescription }) => {
     return (
         <article className='categories-item'>
             <img src={strCategoryThumb} alt={strCategory} />

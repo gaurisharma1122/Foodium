@@ -62,7 +62,7 @@ const MealDetail = () => {
                 {showYoutubePlayer && <ReactPlayer className="react-player" url={mealData.strYoutube} />}
 
                 <div className="meal-details-instructions">
-                    <h2>Instructions: </h2>
+                    <h2 className='heading'>Instructions: </h2>
                     <ul>
                         {
                             instructionArray &&

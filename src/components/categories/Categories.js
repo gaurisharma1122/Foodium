@@ -18,6 +18,7 @@ const Categories = () => {
                     {
                         state.categories.map((item) => {
                             return <CategoriesItem key={item.idCategory}
+                                id={item.idCategory}
                                 strCategory={item.strCategory}
                                 strCategoryThumb={item.strCategoryThumb}
                                 strCategoryDescription={item.strCategoryDescription} />

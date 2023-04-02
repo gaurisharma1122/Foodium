@@ -10,7 +10,9 @@ const Favourites = () => {
 
   return (
     <section className='favourites'>
-      Favourites
+      <div className="container favourites-container">
+        <h2 className='heading'>All your favourites will appear here</h2>
+      </div>
     </section>
   )
 }
