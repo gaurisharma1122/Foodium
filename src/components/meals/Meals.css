@@ -28,7 +28,7 @@
 .meal-detail-title i {
     font-size: 2rem;
     cursor: pointer;
-    color: red;
+    color: var(--dark_pink);
 }
 
 .meal-detail-content {

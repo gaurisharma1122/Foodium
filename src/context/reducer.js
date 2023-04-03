@@ -15,5 +15,10 @@ export const reducer= (state, action)=>{
                 return { ...state, favourites: [ ...state.favourites, action.payload ] };
             }
             break;
+        case 'DELETE_FROM_FAVOURITES':
+            {
+                return { ...state, favourites: state.favourites.filter((item)=> item.id !== action.payload) };
+            }
+            break;
     }
 }

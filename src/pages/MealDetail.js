@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player/youtube'
 import { useGlobalContext } from '../context/context'
 
 const MealDetail = () => {
-    const { state, addToFavourites }= useGlobalContext();
+    const { state, addToFavourites, deleteFromFavourites }= useGlobalContext();
     const { category, mealId } = useParams();
     const [mealData, setMealData] = useState({});
     const [instructionArray, setInstructionArray] = useState(null);
@@ -29,14 +29,17 @@ const MealDetail = () => {
     }, []);
 
     
-
     return (
         <section className='meal-detail'>
             <div className="meal-detail-container container">
 
                 <div className="meal-detail-title">
                     <h2 className='heading'>{mealData?.strMeal}</h2>
-                    <i className="fa-regular fa-heart" onClick={()=> addToFavourites(meal)}></i>
+                    {
+                        state.favourites.some((item)=> item.id === mealId)?
+                        <i className="fa-solid fa-heart" onClick={()=> deleteFromFavourites(mealId)}></i>:
+                        <i className="fa-regular fa-heart" onClick={()=> addToFavourites(meal)}></i>
+                    }
                 </div>
 
                 <div className="meal-detail-content">

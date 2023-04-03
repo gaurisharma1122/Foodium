@@ -25,12 +25,16 @@ const AppProvider= ({ children })=>{
 
     const addToFavourites= (meal)=>{
         dispatch({ type: 'ADD_TO_FAVOURITES', payload: meal });
-    }
+    };
+
+    const deleteFromFavourites= (id)=>{
+        dispatch({ type: 'DELETE_FROM_FAVOURITES', payload: id });
+    };
 
     const [state, dispatch]= useReducer(reducer, initialState);
 
     return (
-        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories, addToFavourites }}>
+        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories, addToFavourites, deleteFromFavourites }}>
             { children }
         </AppContext.Provider>
     );

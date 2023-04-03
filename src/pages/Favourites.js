@@ -23,6 +23,7 @@ const Favourites = () => {
                 {
                   state.favourites.map((item) => {
                     return <FavouritesItem key={item.id}
+                      id={item.id}
                       category={item.category}
                       title={item.title}
                       thumbnail={item.thumbnail} />
