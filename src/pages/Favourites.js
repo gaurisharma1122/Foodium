@@ -7,9 +7,8 @@ const Favourites = () => {
 
   useEffect(() => {
     setActiveNavlink(3);
-    console.log(state.favourites)
-  }, []);
 
+  }, []);
 
 
   return (

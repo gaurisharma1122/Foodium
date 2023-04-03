@@ -6,7 +6,7 @@ export const AppContext= createContext();
 const initialState= {
     activeNavLink: 1,
     categories: [],
-    favourites: []
+    favourites: localStorage.getItem('favouriteMeals')? JSON.parse(localStorage.getItem('favouriteMeals')): []
 }
 
 const AppProvider= ({ children })=>{
