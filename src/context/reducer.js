@@ -9,5 +9,11 @@ export const reducer= (state, action)=>{
             {
                 return { ...state, categories: action.payload };
             }
+            break;
+        case 'ADD_TO_FAVOURITES':
+            {
+                return { ...state, favourites: [ ...state.favourites, action.payload ] };
+            }
+            break;
     }
 }

@@ -5,7 +5,8 @@ export const AppContext= createContext();
 
 const initialState= {
     activeNavLink: 1,
-    categories: []
+    categories: [],
+    favourites: []
 }
 
 const AppProvider= ({ children })=>{
@@ -22,10 +23,14 @@ const AppProvider= ({ children })=>{
         });
     };
 
+    const addToFavourites= (meal)=>{
+        dispatch({ type: 'ADD_TO_FAVOURITES', payload: meal });
+    }
+
     const [state, dispatch]= useReducer(reducer, initialState);
 
     return (
-        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories }}>
+        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories, addToFavourites }}>
             { children }
         </AppContext.Provider>
     );

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import "../components/meals/Meals.css"
 import ReactPlayer from 'react-player/youtube'
+import { useGlobalContext } from '../context/context'
 
 const MealDetail = () => {
+    const { state, addToFavourites }= useGlobalContext();
     const { category, mealId } = useParams();
     const [mealData, setMealData] = useState({});
     const [instructionArray, setInstructionArray] = useState(null);
     const [showYoutubePlayer, setShowYoutubePlayer] = useState(false);
     const numArr = Array.from({ length: 20 }, (_, index) => index + 1);
+    const [meal, setMeal]= useState({});
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
@@ -16,8 +19,16 @@ const MealDetail = () => {
             .then(respData => {
                 setMealData(respData.meals[0]);
                 setInstructionArray(respData.meals[0].strInstructions.split('\r\n'));
+                setMeal({
+                    id: mealId,
+                    category: category,
+                    title: respData.meals[0].strMeal,
+                    thumbnail: respData.meals[0].strMealThumb
+                });
             });
     }, []);
+
+    
 
     return (
         <section className='meal-detail'>
@@ -25,7 +36,7 @@ const MealDetail = () => {
 
                 <div className="meal-detail-title">
                     <h2 className='heading'>{mealData?.strMeal}</h2>
-                    <i class="fa-regular fa-heart"></i>
+                    <i className="fa-regular fa-heart" onClick={()=> addToFavourites(meal)}></i>
                 </div>
 
                 <div className="meal-detail-content">

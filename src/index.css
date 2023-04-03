@@ -40,6 +40,9 @@ a{
 .button a i{
   margin-left: 10px;
 }
+.icon-btn i{
+  margin-left: 0;
+}
 .heading{
   text-align: center;
   font-size: 1.8rem;
