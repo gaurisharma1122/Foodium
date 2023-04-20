@@ -56,3 +56,29 @@ a{
   justify-content: center;
   gap: 20px;
 }
+@media screen and (max-width:850px) {
+  .container{
+    width: 90%;
+  }
+  .button{
+    font-size: 1.2rem;
+  }
+  .cards-container{
+    grid-template-columns: 40% 40% ;
+  }
+  .heading{
+    font-size: 1.6rem!important;
+  }
+}
+@media screen and (max-width:600px) {
+  .button{
+    font-size: 1rem;
+  }
+  .cards-container{
+    grid-template-columns: 85% ;
+  }
+  .heading{
+    font-size: 1.4rem!important;
+  }
+  
+}

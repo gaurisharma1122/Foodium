@@ -89,3 +89,42 @@
 .meal-details-instructions ul li {
     margin: 10px 15px;
 }
+@media screen and (max-width:850px) {
+    .meal-item button{
+        font-size: 1rem!important;
+    }
+    .meal-detail-title i {
+        margin-bottom: 1rem;
+        font-size: 1.6rem
+    }
+    .meal-details-instructions{
+        font-size: 1rem;
+    }
+    
+}
+@media screen and (max-width:600px){
+    .meal-item button{
+        font-size: 0.9rem!important;
+    }
+    .meal-detail-content{
+        flex-direction: column;
+    }
+    .meal-detail-subcontent {
+        margin: 20px auto 0 auto;
+        width: 90%;
+    }
+    .meal-detail-subcontent h3 {
+        display: none;
+    }
+    .meal-detail-title{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .react-player {
+        width: 100%!important;
+    }
+    .meal-details-instructions ul li{
+        font-size: 0.9rem;
+    }
+    
+}

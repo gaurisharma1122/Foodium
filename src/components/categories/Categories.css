@@ -20,3 +20,19 @@
     width: 80%;
     margin: 0 auto 2rem auto;
 }
+@media screen and (max-width:850px) {
+    .categories-item button{
+        font-size: 1rem;
+    }
+    .category-result-container p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .categories-item button{
+        font-size: 0.9rem;
+    }
+    .category-result-container p{
+        font-size: 0.9rem;
+    }
+}

@@ -1,6 +1,7 @@
 .search-bar form{
     display: flex;
     justify-content: center;
+    align-items: stretch;
 }
 .search-bar form input{
     padding: 10px 20px;
@@ -10,3 +11,16 @@
     padding: 10px 10px;
     border-radius: 0px;
   }
+@media screen and (max-width:850px) {
+    
+}
+@media screen and (max-width:600px) {
+    .search-btn i{
+        display: block;
+    
+    }
+    .search-bar form input{
+        padding: 7px 10px;
+        width: 70%;
+    }
+}

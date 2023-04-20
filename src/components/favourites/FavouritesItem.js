@@ -19,6 +19,7 @@ const FavouritesItem = ({ id, category, title, thumbnail }) => {
             </div>
 
             <button className="button icon-btn" onClick={() => deleteFromFavourites(id)}>
+                <span>Remove from favourites</span>
                 <i className="fa-solid fa-trash"></i>
             </button>
 

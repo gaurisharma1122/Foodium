@@ -5,6 +5,7 @@ export const AppContext= createContext();
 
 const initialState= {
     activeNavLink: 1,
+    showNavSidebar: false,
     categories: [],
     favourites: localStorage.getItem('favouriteMeals')? JSON.parse(localStorage.getItem('favouriteMeals')): []
 }
@@ -31,10 +32,18 @@ const AppProvider= ({ children })=>{
         dispatch({ type: 'DELETE_FROM_FAVOURITES', payload: id });
     };
 
+    const openNavSidebar= ()=>{
+        dispatch({ type: 'OPEN_NAV_SIDEBAR' });
+    };
+
+    const closeNavSidebar= ()=>{
+        dispatch({ type: 'CLOSE_NAV_SIDEBAR' });
+    };
+
     const [state, dispatch]= useReducer(reducer, initialState);
 
     return (
-        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories, addToFavourites, deleteFromFavourites }}>
+        <AppContext.Provider value={{ state, dispatch, setActiveNavlink, fetchCategories, addToFavourites, deleteFromFavourites, openNavSidebar, closeNavSidebar }}>
             { children }
         </AppContext.Provider>
     );

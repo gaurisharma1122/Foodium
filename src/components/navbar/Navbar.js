@@ -5,7 +5,12 @@ import { navLinks } from '../../data'
 import "./Navbar.css"
 
 const Navbar = () => {
-  const { state, setActiveNavlink } = useGlobalContext();
+  const { state, setActiveNavlink, openNavSidebar, closeNavSidebar } = useGlobalContext();
+
+  const handleClick= (id)=>{
+    setActiveNavlink(id);
+    closeNavSidebar();
+  }
 
   return (
     <nav>
@@ -13,15 +18,23 @@ const Navbar = () => {
         <div className="nav-logo">
           <Link to='/'><h1>Foodium</h1></Link>
         </div>
+
+        <div className="nav-toggle">
+          {
+            state.showNavSidebar?
+            <i className="fa-solid fa-circle-xmark" onClick={closeNavSidebar}></i>:
+            <i className="fa-solid fa-bars" onClick={openNavSidebar}></i>
+          }
+        </div>
         
-        <div className="nav-links">
+        <div className={state.showNavSidebar?"show-nav-sidebar nav-links": "nav-links"}>
           <ul>
             {
               navLinks.map((item) => {
                 return (
                   <Link key={item.id} to={item.url}
                     className={state.activeNavLink === item.id ? 'active-navlink' : undefined}>
-                    <li onClick={() => setActiveNavlink(item.id)} >
+                    <li onClick={() => handleClick(item.id)} >
                       {item.title}
                     </li>
                   </Link>

@@ -19,3 +19,25 @@
     color: var(--text_color_1);
     margin-bottom: 2rem;
 }
+@media screen and (max-width:850px) {
+    .hero-container-data{
+        width: 70%;
+    } 
+    .hero-container-data h2{
+        font-size: 2rem;
+    }
+    .hero-container-data p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .hero-container-data{
+        width: 100%;
+    }
+    .hero-container-data h2{
+        font-size: 1.8rem;
+    }
+    .hero-container-data p{
+        font-size: 1rem;
+    }
+}

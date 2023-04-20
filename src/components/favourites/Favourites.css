@@ -31,9 +31,48 @@
 .info p{
     color: var(--text_color_1);
     font-weight: 700;
+    font-size: 1.1rem;
 }
 .favourites-item-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+.icon-btn span{
+    display: none;
+}
+@media screen and (max-width:850px){
+    .favourites-item-container{
+        grid-template-columns: 1fr;
+    }
+    .info h3{
+        font-size: 1.2rem;
+    }
+    .info p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .favourites-item{
+        flex-direction: column;
+        align-items: start;
+    }
+    .icon-btn{
+        margin-top: 20px;
+    }
+    .icon-btn span{
+        display: block;
+    }
+    .icon-btn i{
+        display: none;
+    }
+    .info h3{
+        font-size: 1rem;
+    }
+    .info p{
+        font-size: 0.9rem;
+    }
+    .favourites-item .icon-btn{
+        font-size: 0.8rem;
+    }
 }
